@@ -1,0 +1,35 @@
+{
+  "name": "AmbulanceRequest",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": [
+        "confirmed",
+        "assigned",
+        "on_the_way",
+        "arrived"
+      ],
+      "default": "confirmed"
+    },
+    "location_line": {
+      "type": "string"
+    },
+    "eta_minutes": {
+      "type": "number",
+      "default": 5
+    },
+    "vehicle_number": {
+      "type": "string"
+    },
+    "driver_name": {
+      "type": "string"
+    },
+    "driver_phone": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "location_line"
+  ]
+}

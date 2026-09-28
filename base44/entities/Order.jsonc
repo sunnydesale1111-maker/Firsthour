@@ -1,0 +1,54 @@
+{
+  "name": "Order",
+  "type": "object",
+  "properties": {
+    "kit_name": {
+      "type": "string"
+    },
+    "kit_price": {
+      "type": "number"
+    },
+    "addons": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "total": {
+      "type": "number"
+    },
+    "fulfillment": {
+      "type": "string",
+      "enum": [
+        "instant",
+        "scheduled"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "placed",
+        "packed",
+        "out_for_delivery",
+        "delivered"
+      ],
+      "default": "placed"
+    },
+    "eta_minutes": {
+      "type": "number",
+      "default": 10
+    },
+    "address_line": {
+      "type": "string"
+    },
+    "payment_method": {
+      "type": "string",
+      "default": "UPI"
+    }
+  },
+  "required": [
+    "kit_name",
+    "total",
+    "address_line"
+  ]
+}

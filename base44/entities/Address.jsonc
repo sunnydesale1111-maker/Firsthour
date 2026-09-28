@@ -1,0 +1,25 @@
+{
+  "name": "Address",
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string",
+      "enum": [
+        "Home",
+        "Work",
+        "Other"
+      ]
+    },
+    "address_line": {
+      "type": "string"
+    },
+    "is_default": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "label",
+    "address_line"
+  ]
+}
